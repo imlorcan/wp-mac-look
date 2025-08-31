@@ -1,0 +1,240 @@
+/* 基础样式重置 */
+.mac-lock-wrap * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 容器样式 */
+.mac-lock-wrap {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 卡片容器 - 模仿前台磨砂玻璃效果 */
+.mac-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin-top: 15px;
+}
+
+/* 标题样式 */
+.mac-lock-wrap h1 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* 表单组样式 */
+.mac-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+/* 标签样式 */
+.mac-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+    font-size: 15px;
+}
+
+/* 输入框样式 - 与前台密码框风格统一 */
+.mac-input {
+    width: 100%!important;
+    padding: 12px 15px!important;
+    border: 1px solid rgba(0, 0, 0, 0.1)!important;
+    border-radius: 8px!important;
+    background: rgba(255, 255, 255, 0.7)!important;
+    font-size: 15px!important;
+    transition: all 0.3s ease!important;
+    color: #333!important;
+}
+
+.mac-input:focus {
+    outline: none!important;
+    border-color: #0071e3!important; /* MAC蓝 */
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1)!important;
+    background: #fff!important;
+}
+
+/* 上传区域样式 */
+.mac-upload-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* 按钮样式 - 模仿MAC风格 */
+.mac-button {
+    padding: 10px 20px;
+    background: #0071e3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mac-button:hover {
+    background: #0077ed;
+    transform: translateY(-1px);
+}
+
+.mac-button:active {
+    transform: translateY(0);
+}
+
+/* 预览容器 */
+.mac-preview-container {
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+/* 预览图片 */
+.mac-preview-image {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.mac-preview-image:hover {
+    transform: scale(1.02);
+}
+
+/* 描述文字 */
+.mac-description {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #666;
+}
+
+/* 提交按钮区域 */
+.mac-form-actions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* 提交按钮样式 */
+.mac-submit {
+    padding: 12px 30px!important;
+    font-size: 15px!important;
+    border-radius: 8px!important;
+    background: #0071e3!important;
+    border: none!important;
+    color: white!important;
+    transition: all 0.2s ease!important;
+}
+
+.mac-submit:hover {
+    background: #0077ed!important;
+    transform: translateY(-1px)!important;
+}
+/* 保存按钮 */
+.button.button-primary {
+    padding: 10px 20px;
+    background: #0071e3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    line-height: normal!important;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.button.button-primary:hover {
+    background: #0077ed!important;
+    transform: translateY(-1px)!important;
+}
+/* 开关样式 */
+.mac-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin: 10px 0;
+}
+
+.mac-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .3s;
+    border-radius: 24px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: #0071e3;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+/* 响应式调整 */
+@media (max-width: 768px) {
+   .mac-card {
+        padding: 20px;
+    }
+    
+   .mac-upload-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+   .mac-button {
+        width: 100%;
+    }
+}
+    
