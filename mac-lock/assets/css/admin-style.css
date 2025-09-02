@@ -50,7 +50,7 @@
     font-size: 15px;
 }
 
-/* 输入框样式 - 与前台密码框风格统一 */
+/* 输入框样式*/
 .mac-input {
     width: 100%!important;
     padding: 12px 15px!important;
@@ -68,7 +68,23 @@
     box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1)!important;
     background: #fff!important;
 }
-
+/* 填写框样式*/
+.mac-textarea {
+    width: 100%!important;
+    padding: 12px 15px!important;
+    border: 1px solid rgba(0, 0, 0, 0.1)!important;
+    border-radius: 8px!important;
+    background: rgba(255, 255, 255, 0.7)!important;
+    font-size: 15px!important;
+    transition: all 0.3s ease!important;
+    color: #333!important;
+}
+.mac-textarea:focus {
+    outline: none!important;
+    border-color: #0071e3!important; /* MAC蓝 */
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1)!important;
+    background: #fff!important;
+}
 /* 上传区域样式 */
 .mac-upload-group {
     display: flex;
