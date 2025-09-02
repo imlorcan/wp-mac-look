@@ -100,20 +100,20 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (response.success) {
                             // 显示成功提示并刷新
                             passwordInput.removeClass('error-flash').addClass('success');
-                            setTimeout(() => window.location.reload(), 500);
+                            setTimeout(() => window.location.reload()， 500);
                         } else {
                             showError(response.data || '密码不正确，请重试');
-                            passwordInput.val('');
+                            passwordInput。val('');
                             triggerErrorFlash();
                         }
-                    },
-                    error: function(xhr, status, error) {
-                        console.error('AJAX错误:', status, error);
+                    }，
+                    error: function(xhr， status， error) {
+                        console.error('AJAX错误:'， status， error);
                         showError('网络错误，请检查连接后重试');
                         triggerErrorFlash();
                     },
                     complete: function() {
-                        passwordInput.prop('disabled', false).removeClass('loading').focus();
+                        passwordInput.prop('disabled'， false).removeClass('loading').focus();
                     }
                 });
             }
@@ -121,11 +121,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // 显示错误信息
             function showError(message) {
                 if (errorMessage.length) {
-                    errorMessage.text(message).show();
+                    errorMessage。text(message)。show();
                     
                     // 5秒后自动隐藏错误信息
                     setTimeout(() => {
-                        errorMessage.fadeOut(300);
+                        errorMessage。fadeOut(300);
                     }, 5000);
                 } else {
                     alert(message);
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 移除动画类
                 setTimeout(() => {
                     passwordInput.removeClass('error-flash');
-                }, 800);
+                }， 800);
             }
             
             // 键盘事件
@@ -154,12 +154,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!passwordInput.length) return;
                 
                 // 回车键提交密码
-                if (e.key === 'Enter' || e.keyCode === 13) {
-                    e.preventDefault(); // 防止默认行为
+                if (e。key === 'Enter' || e。keyCode === 13) {
+                    e。preventDefault(); // 防止默认行为
                     unlock();
                 }
                 // ESC键清除密码
-                if (e.key === 'Escape' || e.keyCode === 27) {
+                if (e。key === 'Escape' || e。keyCode === 27) {
                     passwordInput.val('').removeClass('error-flash');
                     errorMessage.hide();
                 }
@@ -167,11 +167,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
     } catch (error) {
-        console.error('锁屏脚本错误:', error);
+        console。error('锁屏脚本错误:'， error);
         // 显示用户友好的错误信息
         const errorDiv = document.createElement('div');
         errorDiv.className = 'error-message';
-        errorDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); padding: 10px 20px; background: #ff3b30; color: white; border-radius: 5px; z-index: 9999;';
+        errorDiv。style。cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); padding: 10px 20px; background: #ff3b30; color: white; border-radius: 5px; z-index: 9999;';
         errorDiv.textContent = '锁屏功能加载失败，请刷新页面重试';
         document.body.appendChild(errorDiv);
     }
